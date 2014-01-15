@@ -1,0 +1,19 @@
+h1, h2 {
+	margin: 0;
+	padding: 3px 35px;
+	font-size: 1.6em;
+	background-color:black;
+	display: inline;
+}
+
+h1 {
+	color:white;
+}
+
+h2 {
+	color:yellow;
+}
+
+h3 {
+	margin-top: 45px;
+}

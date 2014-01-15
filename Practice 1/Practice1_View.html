@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+
+<html> 
+	<head>    
+		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js'></script>
+		<script src="Practice1_Ctrl.js"></script>
+        <link rel="stylesheet" type="text/css" href="Practice1_Style.css">
+		<title>Practice 1</title>  
+	</head>  
+
+	<body ng-app>    <!-- Note: no ng-app name (ex: ng-app="myapp") -->
+
+		<h1>Practice 1</h1>
+		<h2>Simple AngularJS (Without ng-app implicit name)</h2>    
+
+		<p>The purpose of this practice is to play with AngularJS MVC.</p>
+
+		<div ng-controller="SimpleCtrl">
+			<h3>Basic Controller</h3>
+			<p><strong>"To be or not to be!"</strong> What is the controller says? <strong>{{ctrlSays}}</strong></p>
+			<p>So, what have we learned?</p>
+			<ul>
+        		<li ng-repeat="lesson in lessons">
+          			<span style="color:{{lesson.color}}">{{lesson.text}}</span>
+        		</li>
+      		</ul>
+		</div>
+		
+	</body> 
+</html>

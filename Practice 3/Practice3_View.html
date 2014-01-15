@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+
+<html> 
+	<head>    
+		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js'></script>
+		<script src="Practice3_Ctrl.js"></script>
+        <script src="Practice3_Model.js"></script>
+        <link rel="stylesheet" type="text/css" href="Practice3_Style.css">
+		<title>Practice 3</title>  
+	</head>
+	<body ng-app="practice">
+
+		<h1>Practice 3</h1>
+		<h2>Novice AngularJS (With ng-app implicit name)</h2>    
+
+		<p>The purpose of this practice is to play with AngularJS MVC.</p>
+
+<strong>NOT WORKING YET</strong>
+		<form ng-controller="someCtrl">
+			<h3>Practice 3.1: Controller & Model</h3>
+			<p>read from scope: <strong>{{scopeSays}}</strong></p>
+			<ul>
+        		<li ng-repeat='chapter in chapters | orderBy:"title"'>
+	        		<p>{{chapter.summary}}</p>
+        		</li>
+      		</ul>
+		</form>
+	</body> 
+</html>
