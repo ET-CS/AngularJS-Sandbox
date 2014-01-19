@@ -4,7 +4,7 @@
 				// this.Person=function() {
 						// this.name="John";
 						// this.family="Do";
-						// this.phoneNumber="0555555555";
+						// this.phoneNumber="0555555";
 				// }
 		// }
 // );
