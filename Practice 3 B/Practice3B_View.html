@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js'></script>
+                <script src="Practice3B_Ctrl.js"></script>
+				<script src="Practice3B_Model.js"></script>
+				<link rel="stylesheet" type="text/css" href="Practice3B_Style.css">
+                <title>Practice 3</title>
+        </head>
+        <body ng-app="practice">
+
+                <h1>Practice 3</h1>
+                <h2>Novice AngularJS (With ng-app implicit name)</h2>
+
+                <p>The purpose of this practice is to play with AngularJS MVC.</p>
+
+<strong>WORKING</strong>
+                <form ng-controller="someCtrl">
+                        <h3>Practice 3.1: Controller & Model</h3>
+                        <ul>
+							<h3> This is from data inside the scope</h3>
+							<li ng-repeat='people in peoplesData | orderBy:"name"'>
+								 <p><em>Person name: </em>{{people.name}}</p>
+								 <p><em>Person family: </em> {{people.family}}</p>
+								 <p><em>Person phone number: </em> {{people.phoneNumber}}</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<h3> This is from a function inside the scope</h3>
+							<li ng-repeat='oper in peoplesOperations | orderBy:"nameOfOperator"'>
+								<p><em>The person which operates: <em>{{oper.nameOfOperator}}</p>
+								<p><em> The operation: <em> {{oper.operation}}</p>
+							</li>						
+                      </ul>
+					  
+                </form>
+        </body>
+</html>

@@ -3,8 +3,8 @@
 <html> 
 	<head>    
 		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js'></script>
-		<script src="Practice3_Ctrl.js"></script>
-        <script src="Practice3_Model.js"></script>
+		<script src="Practice3A_Ctrl.js"></script>
+        <script src="Practice3A_Model.js"></script>
         <link rel="stylesheet" type="text/css" href="Practice3_Style.css">
 		<title>Practice 3</title>  
 	</head>
@@ -15,14 +15,14 @@
 
 		<p>The purpose of this practice is to play with AngularJS MVC.</p>
 
-<strong>NOT WORKING YET</strong>
+<strong> WORKING </strong>
 		<form ng-controller="someCtrl">
 			<h3>Practice 3.1: Controller & Model</h3>
-			<p>read from scope: <strong>{{scopeSays}}</strong></p>
+			<p>read from scope: <strong>{{someStringFromScope}}</strong></p>
 			<ul>
-        		<li ng-repeat='chapter in chapters | orderBy:"title"'>
-	        		<p>{{chapter.summary}}</p>
-        		</li>
+        		<li>  <p>All the string: {{someStringFromModel}}</p>  </li>
+				<li>  <p>Just The body of the string: {{someStringFromModel.messege}}</p> </li>
+									
       		</ul>
 		</form>
 	</body> 
