@@ -9,10 +9,11 @@ angular.module('practice', []);	//Without this nothing works!
 
 // Implicit np-app name controller
 angular.module('practice').controller('someCtrl',function($scope,someModel)
-	{		
-		    
+	{	
+		$scope.model=someModel;
         $scope.peoplesData=someModel.someData;  
 	    $scope.peoplesOperations=someModel.someFunction();
+	    $scope.animals=someModel.getAnimals();
 	}
 	
 	);

@@ -1,5 +1,7 @@
 
 angular.module('practice').service('someModel',function() {
+		this.someString = "Hi! Where you found me?";
+		
 		this.someData =   [
 									{       
 										name:"John1",
@@ -27,7 +29,23 @@ angular.module('practice').service('someModel',function() {
 									},
 							];
 
-	  }			
+	  };
+	  
+	  this.someAnimalsData = [
+	   									{       
+											name:"dog",
+											action:"bark",
+											wiki: "http://en.wikipedia.org/wiki/Bark_(sound)"
+										},
+										
+										{       
+											name:"lion",
+											action:"roar",
+											wiki: "http://en.wikipedia.org/wiki/Roar_(utterance)"
+										},
+								];
+
+	  this.getAnimals = function() { return this.someAnimalsData; };
 });
     
 
@@ -42,9 +60,14 @@ angular.module('practice').service('someModel',function() {
 //										this.name="John3"
 //									},
 
+// ET: for me the above with the '=' works. the ":" is wrong syntax. it's for dict i think (like someData).
+
 //									or
 //									phoneNumber:02222222 instead of '02222222'									
-									
+// not legal syntax for variable.
+
+
 //									or
 //									this.someFunction= return [
-
+// this mixes put inside variable with return. wrong syntax. it's like writing in java:
+// String someStr = return "Hello"; 

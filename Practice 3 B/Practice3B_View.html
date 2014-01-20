@@ -18,22 +18,31 @@
 <strong>WORKING</strong>
                 <form ng-controller="someCtrl">
                         <h3>Practice 3.1: Controller & Model</h3>
+                        <p><em>Get some String from model using controller:</em> <strong>{{model.someString}}</strong></p>
+                        
+                        <h3>Read from Dictionary in model</h3>
                         <ul>
-							<h3> This is from data inside the scope</h3>
 							<li ng-repeat='people in peoplesData | orderBy:"name"'>
-								 <p><em>Person name: </em>{{people.name}}</p>
-								 <p><em>Person family: </em> {{people.family}}</p>
-								 <p><em>Person phone number: </em> {{people.phoneNumber}}</p>
+								<p>person {{$index+1}}: <em>name: </em>{{people.name}}<br/>
+								<em>Person family: </em> {{people.family}}<br/>
+								<em>Person phone number: </em> {{people.phoneNumber}}</p>
 							</li>
 						</ul>
 						
+						<h3> This is from a function inside the model</h3>
 						<ul>
-							<h3> This is from a function inside the scope</h3>
 							<li ng-repeat='oper in peoplesOperations | orderBy:"nameOfOperator"'>
-								<p><em>The person which operates: <em>{{oper.nameOfOperator}}</p>
-								<p><em> The operation: <em> {{oper.operation}}</p>
+								<p><em>The person which operates: </em>{{oper.nameOfOperator}}<br/>
+								<em> The operation: </em> {{oper.operation}}</p>
 							</li>						
-                      </ul>
+                      	</ul>
+					  
+					  	<h3> This is from a function inside the model thats read from another dict in model</h3>
+						<ul>
+							<li ng-repeat='animal in animals | orderBy:"name"'>
+								<p>Animal {{$index+1}}: The {{animal.name}} is <a href="{{animal.wiki}}">{{animal.action}}ing</a></p>
+							</li>						
+                      	</ul>
 					  
                 </form>
         </body>
